@@ -1,0 +1,124 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: var(--padding-sm) var(--padding-lg);
+    background-color: transparent;
+    z-index: 10;
+    color: white;
+
+    &.white-bg {
+        background-color: white;
+
+        *{
+            color: black;
+        }
+    }
+
+    &.scrolled {
+        .navbarLogo,
+        .navbarMenu {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .navbarLogo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .navbarMenu {
+        @media (max-width: 768px) {
+            position: absolute;
+            height: 100vh;
+            width: 45vw;
+            top: 0;
+            right: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        *{
+            text-decoration: none;
+            color: white;
+        }
+
+        &.active {
+            @media (max-width: 768px) {
+                display: flex;
+                background-color: white;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+
+                    li {
+                        height: 25px;
+
+                        a {
+                            color: black;
+                            text-decoration: none;
+
+                            &:hover {
+                                border-bottom: 1px solid black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            list-style: none;
+            gap: 50px;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .cart-search {
+        display: flex;
+        gap: 30px;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 3;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin-bottom: 5px;
+            background-color: black;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

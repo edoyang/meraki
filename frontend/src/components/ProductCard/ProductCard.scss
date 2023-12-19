@@ -1,0 +1,87 @@
+@keyframes loadingPulse {
+    0%, 100% {
+      background-color: #f0f0f0;
+    }
+    50% {
+      background-color: #e0e0e0;
+    }
+  }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    max-height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 15px 3px rgba(0,0,0,0.1);
+
+    &.loading-card {
+        animation: loadingPulse 1.5s infinite ease-in-out;
+        color: transparent; // Hides text
+    
+        img {
+          background-color: #f0f0f0; // Gray placeholder for image
+          height: 250px; // Ensure consistent height
+          width: 100%;
+        }
+    
+        .card-body {
+          #addToCart {
+            border-color: transparent;
+          }
+    
+          .name, .price {
+            background-color: #e0e0e0; // Gray placeholder for text
+            height: 20px; // Consistent height for placeholder bars
+            border-radius: 4px;
+          }
+          .name {
+            width: 120px;
+          }
+          .price {
+            width: 45px;
+          }
+
+        }
+      }
+
+    img{
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .card-body{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        "title button"
+        "price button";
+        padding: 10px 20px;
+        place-content: space-between;
+        row-gap: 5px;
+
+        .name{
+            grid-area: title;
+            font-size: var(--fontSmall);
+            height: 18px;
+            width: 65px;
+        }
+
+        .price{
+            grid-area: price;
+            font-size: var(--fontSmall);
+            height: 18px;
+            width: 45px;
+        }
+
+        #addToCart{
+          grid-area: button;
+        }
+    }
+}
+
+.fetch{
+    margin-top: 50px;
+    display: block;
+}
