@@ -12,9 +12,25 @@
 
     &.white-bg {
         background-color: white;
+        color: black;
 
-        *{
-            color: black;
+        .navbarMenu{
+            ul{
+                li{
+                    a{
+                        color: black;
+                    }
+                }
+                .btn-secondary{
+                    border: 1px solid black;
+
+                    &:hover{
+                        a{
+                            color: white;
+                        }
+                    }
+                }
+            }
         }
     }
 
