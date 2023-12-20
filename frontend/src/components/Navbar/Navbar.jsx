@@ -1,8 +1,8 @@
 import './Navbar.scss';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import Cart from '../cart-search/cart';
-import Search from '../cart-search/search';
+import Cart from '../Cart-Search/cart';
+import Search from '../Cart-Search/search';
 
 const Navbar = () => {
   const [activeClass, setActiveClass] = useState('');

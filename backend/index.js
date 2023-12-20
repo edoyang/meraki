@@ -3,10 +3,15 @@ const express = require('express');
 const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
 const connectDB = require('./config/db');
-
 const app = express();
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'http://localhost:8080',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true
+    }
+));
 app.use(express.json());
 
 // Connect to MongoDB
