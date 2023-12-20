@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Added loading state
 
   useEffect(() => {
     const fetchProducts = async () => {
+      setIsLoading(true); // Start loading before fetching
       try {
         const response = await fetch('https://server-lime-omega.vercel.app/api/products');
         if (!response.ok) {
@@ -16,14 +18,11 @@ const ProductList = () => {
       } catch (error) {
         console.error("Error fetching products:", error);
       }
+      setIsLoading(false); // Stop loading after fetching
     };
 
     fetchProducts();
   }, []);
-
-  if (products.length === 0) {
-    return <div>Loading...</div>;
-  }
 
   const productListStyle = {
     display: 'grid',
