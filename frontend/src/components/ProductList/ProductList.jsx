@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 
 const ProductList = () => {
@@ -33,9 +33,13 @@ const ProductList = () => {
 
   return (
     <div className='productList' style={productListStyle}>
-      {products.map((product) => (
-        <ProductCard key={product._id} product={product} />
-      ))}
+      {isLoading
+        ? Array.from({ length: 4 }).map((_, index) => ( // Render placeholders
+            <ProductCard key={index} product={null} />
+          ))
+        : products.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
     </div>
   );
 };
