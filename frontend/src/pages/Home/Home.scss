@@ -152,4 +152,11 @@
     .title{
         text-align: center;
     }
+
+    .testi-card{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 var(--padding-lg);
+    }
 }

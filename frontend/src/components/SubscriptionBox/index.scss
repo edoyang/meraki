@@ -1,0 +1,47 @@
+.subscribe{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-md) var(--padding-lg);
+    background-image: url('Subscribe.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+
+    h1{
+        flex: 1;
+        color: white;
+    }
+
+    .input{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 15px;
+        
+        input{
+            border-radius: 5px;
+            height: 35px;
+            background-color: transparent;
+            border: 1px solid white;
+            width: 50%;
+            color: white;
+            padding: 0px 10px;
+
+            &::placeholder{
+                color: gray;
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        button{
+            background-color: var(--primary-dark);
+            border: none;
+        }
+    }
+}

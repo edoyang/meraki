@@ -1,3 +1,4 @@
+import { SubscriptionBox } from '../../components';
 import PrimaryCard from '../../components/PrimaryCard/PrimaryCard';
 import ProductList from '../../components/ProductList/ProductList';
 import SecondaryCard from '../../components/SecondaryCard/SecondaryCard';
@@ -77,10 +78,15 @@ const Home = () => {
       </div>
       <div className="testimonials">
         <h1 className="title">What do they say about us</h1>
-        {review.map((review, index) => (
-          <TestimonialCard key={index} image={review.image} name={review.name} comment={review.comment} />
-          )
-        )}
+        <div className="testi-card">
+          {review.map((review, index) => (
+            <TestimonialCard key={index} image={review.image} name={review.name} comment={review.comment} />
+            )
+          )}
+        </div>
+      </div>
+      <div className="subscription">
+        <SubscriptionBox />
       </div>
     </div>
   );
