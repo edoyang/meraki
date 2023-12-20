@@ -6,7 +6,7 @@ const connectDB = require('./config/db');
 const app = express();
 
 const corsOptions = {
-    origin: 'https://meraki-bay.vercel.app',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
