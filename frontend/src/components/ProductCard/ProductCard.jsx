@@ -1,36 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './ProductCard.scss';
 
-const ProductCard = ({ product: initialProduct }) => {
-  const [product, setProduct] = useState(initialProduct);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setProduct(initialProduct);
-      setIsLoading(false);
-    });
-
-    return () => clearTimeout(timer);
-  }, [initialProduct]);
+const ProductCard = ({ product }) => {
+  const isLoading = !product; // Determine loading state based on the presence of 'product'
 
   const imagePlaceholder = (
-    <div style={{ height: '250px', backgroundColor: '#cccccc' }}></div>
+    <div className="image-placeholder"></div> // Use a class instead of inline styles for the placeholder
   );
 
-  const productImage = (
-    <img src={product && product.Image ? product.Image : 'default_product.jpg'} 
-         alt={product ? product.Name : ""}
-    />
+  const productImage = product && (
+    <img src={product.Image || 'default_product.jpg'} alt={product.Name || ""} />
   );
 
   return (
     <div className={`card ${isLoading ? 'loading-card' : ''}`}>
       {isLoading ? imagePlaceholder : productImage}
       <div className="card-body">
-        <h2 className='name'>{!isLoading && product ? product.Name : ""}</h2>
-        <p className='price'>{!isLoading && product ? `$${product.Price.toFixed(2)}` : ""}</p>
-        {!isLoading && <button className='btn-primary' id='addToCart'>Add to Cart</button>}
+        <h2 className='name'>{product && product.Name}</h2>
+        <p className='price'>{product && `$${product.Price.toFixed(2)}`}</p>
+        {product && <button className='btn-primary' id='addToCart'>Add to Cart</button>}
       </div>
     </div>
   );

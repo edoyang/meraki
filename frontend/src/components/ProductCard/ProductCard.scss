@@ -20,7 +20,7 @@
         animation: loadingPulse 1.5s infinite ease-in-out;
         color: transparent; // Hides text
     
-        img {
+        .image-placeholder {
           background-color: #f0f0f0; // Gray placeholder for image
           height: 250px; // Ensure consistent height
           width: 100%;
@@ -79,9 +79,4 @@
           grid-area: button;
         }
     }
-}
-
-.fetch{
-    margin-top: 50px;
-    display: block;
 }

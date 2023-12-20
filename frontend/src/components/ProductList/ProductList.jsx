@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 
 const ProductList = () => {
@@ -34,7 +34,7 @@ const ProductList = () => {
   return (
     <div className='productList' style={productListStyle}>
       {isLoading
-        ? Array.from({ length: 4 }).map((_, index) => ( // Render placeholders
+        ? Array.from({ length: 8 }).map((_, index) => (
             <ProductCard key={index} product={null} />
           ))
         : products.map((product) => (
