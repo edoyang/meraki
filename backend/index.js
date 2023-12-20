@@ -5,13 +5,14 @@ const productRoutes = require('./routes/productRoutes');
 const connectDB = require('./config/db');
 const app = express();
 
-app.use(cors(
-    {
-        origin: 'https://meraki-bay.vercel.app/',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        credentials: true
-    }
-));
+const corsOptions = {
+    origin: 'https://meraki-bay.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Connect to MongoDB
