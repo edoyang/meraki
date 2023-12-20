@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: 'http://localhost:8080',
+        origin: 'https://meraki-bay.vercel.app/',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true
     }
