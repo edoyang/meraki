@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from './components';
+import { Footer, Navbar } from './components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
@@ -20,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
+      <Footer />
     </Router>
     </>
   )

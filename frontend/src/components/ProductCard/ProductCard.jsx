@@ -1,4 +1,3 @@
-import React from 'react';
 import './ProductCard.scss';
 
 const ProductCard = ({ product }) => {

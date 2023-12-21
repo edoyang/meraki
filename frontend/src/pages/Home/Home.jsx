@@ -1,4 +1,4 @@
-import { SubscriptionBox } from '../../components';
+import { Blog, SubscriptionBox } from '../../components';
 import PrimaryCard from '../../components/PrimaryCard/PrimaryCard';
 import ProductList from '../../components/ProductList/ProductList';
 import SecondaryCard from '../../components/SecondaryCard/SecondaryCard';
@@ -87,6 +87,9 @@ const Home = () => {
       </div>
       <div className="subscription">
         <SubscriptionBox />
+      </div>
+      <div className="blog">
+        <Blog />
       </div>
     </div>
   );
