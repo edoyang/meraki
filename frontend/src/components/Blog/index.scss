@@ -5,20 +5,19 @@
     padding: var(--padding-lg);
 
     .blog-card{
-        width: 360px;
+        max-width: 360px;
         display: flex;
         flex-direction: column;
         justify-content: start;
         position: relative;
 
+        
         img {
             border-radius: 10px;
-            min-width: 360px;
-            min-height: 335px;
             object-fit: cover;
             object-position: center;
         }
-
+        
         .blog-title{
             h1{
                 font-size: 16px;
@@ -26,17 +25,31 @@
                 text-wrap: nowrap;
                 overflow: hidden;
             }
-    
+            
             p{
                 font-size: 14px;
+                height: 80px;
             }
         }
-
+        
         .blog-extra{
             display: flex;
             justify-self: end;
             justify-content: space-between;
+            
+            button{
+                background: none;
+                color: var(--primary);
+                font-weight: 800;
+                cursor: pointer;
+                border: none;
+            }
         }
-
+        
+        @media (max-width: 1350px) {
+            width: 30%;
+            height: 345px;
+            justify-content: space-between;
+        }
     }
 }

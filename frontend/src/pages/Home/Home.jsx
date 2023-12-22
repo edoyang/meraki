@@ -4,6 +4,7 @@ import ProductList from '../../components/ProductList/ProductList';
 import SecondaryCard from '../../components/SecondaryCard/SecondaryCard';
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 import './Home.scss';
+import './home-responsive.scss';
 
 const servicesContent = [
   { image: 'indoor-plant.svg', title: 'Indoor Plants', content: 'Bring the beauty of nature to your outdoor spaces with our wide selection of outdoor plants' },

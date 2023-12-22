@@ -1,6 +1,10 @@
+import UnderDevelopment from "../UnderDevelopment/UnderDevelopment"
+
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <UnderDevelopment />
+    </div>
   )
 }
 

@@ -7,9 +7,10 @@ const Footer = () => {
         <div className="contact-socmed">
             <h1>Feel free to contact us</h1>
             <div className="icons">
-                <img src="instagram.svg" alt="instagram" />
-                <img src="facebook.svg" alt="facebook" />
-                <img src="twitter.svg" alt="twitter" />
+                <a href='https://www.instagram.com/edoyangz/' target="_blank"><img src="instagram.svg" alt="instagram" /></a>
+                <a href='https://www.facebook.com/edoyangz/' target="_blank"><img src="facebook.svg" alt="facebook" /></a>
+                <a href='https://github.com/edoyang' target="_blank"><img src="github.svg" alt="github" /></a>
+                <a href='https://www.linkedin.com/in/edo-yang-574219249/ target="_blank"'><img src="linkedin.svg" alt="linkedin" /></a>
             </div>
             <div className="pages">
                 <Link to="/">Home</Link>
