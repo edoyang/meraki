@@ -15,11 +15,27 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+        padding: 0 var(--padding-lg);
+
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+
+        h1{
+            font-size: var(--font-lg);
+        }
 
         .icons{
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
+
+            @media (max-width: 500px) {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                place-content: space-between;
+                gap: 50px;
+            }
 
             a{
                 img{
@@ -43,6 +59,14 @@
             justify-content: center;
             gap: 70px;
             width: max-content;
+            text-align: center;
+            width: 100%;
+
+            @media (max-width: 500px) {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                gap: 50px;
+            }
 
             a{
                 text-decoration: none;
@@ -61,17 +85,28 @@
         background-color: black;
         width: 100%;
         z-index: 1;
+        font-size: var(--font-sm);
     }
 
     .vector1{
         position: absolute;
         left: 0;
         bottom: -20px;
+
+        @media (max-width:1200px) {
+            width: 37vw;
+            bottom: 0;
+        }
     }
 
     .vector2{
         position: absolute;
         right: 0;
         bottom: -20px;
-    }
+
+        @media (max-width:1200px) {
+            width: 37vw;
+            bottom: 0;
+        }
+}
 }

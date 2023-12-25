@@ -5,10 +5,16 @@
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     padding: var(--padding-sm) var(--padding-lg);
     background-color: transparent;
     z-index: 10;
     color: white;
+
+    @media (max-width: 768px) {
+        position: sticky;
+        background-color: white;
+    }
 
     &.white-bg {
         background-color: white;
@@ -35,13 +41,15 @@
     }
 
     &.scrolled {
-        .navbarLogo,
-        .navbarMenu {
-            display: none;
-        }
-
-        .hamburger {
-            display: block;
+        @media (min-width: 768px) {
+            .navbarLogo, .navbarMenu, .cart-search, .hamburger{
+                display: none;
+            }
+    
+            .navbar-scroll{
+                display: block;
+            }
+            
         }
     }
 
@@ -136,5 +144,32 @@
             background-color: black;
             transition: all 0.3s ease-in-out;
         }
+    }
+
+    .navbar-scroll{
+        display: none;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        top: 0;
+        left: 50%;
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        position: absolute;
+        
+        
+        .animation{
+            padding: 5px 30px;
+            width: 100%;
+            img{
+                width: 15px;
+                height: 15px;
+                object-fit: contain;
+                object-position: center;
+            }
+            &:hover{
+                animation: bounce 0.7s ease-in-out infinite;
+            }
+        }
+
     }
 }

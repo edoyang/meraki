@@ -12,7 +12,11 @@ const Navbar = () => {
   const toggleActiveClass = () => {
     const isActive = activeClass === 'active';
     setActiveClass(isActive ? '' : 'active');
-    setNavbarClass(isActive ? '' : 'scrolled');
+  }
+
+  const toggleScrolledClass = () => {
+    const isScrolled = navbarClass === 'scrolled';
+    setNavbarClass(isScrolled ? '' : 'scrolled');
   }
 
   const handleScroll = () => {
@@ -39,8 +43,7 @@ const Navbar = () => {
   }, [activeClass]);
 
   return (
-    <nav>
-      <div className={`navbar ${navbarClass} ${bgColor}`}>
+    <nav className={`navbar ${navbarClass} ${bgColor}`}>
         <div className="navbarLogo">
           <h1>MERAKI WRAP</h1>
         </div>
@@ -65,7 +68,11 @@ const Navbar = () => {
           <span></span>
           <span></span>
         </div>
-      </div>
+        <div onClick={toggleScrolledClass} className="navbar-scroll">
+          <div className="animation">
+            <img src="navbar-scroll.svg" alt="arrow" />
+          </div>
+        </div>
     </nav>
   );
 }

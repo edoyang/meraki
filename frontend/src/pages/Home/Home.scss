@@ -16,12 +16,14 @@
 
     .hero-title{
         display: block;
+        font-size: var(--font-lg);
     }
 
     .hero-caption{
         text-align: center;
         text-wrap: balance;
         max-inline-size: 700px;
+        font-size: var(--font-md);
     }
 
     .hero-button{
@@ -57,7 +59,10 @@
 
 }
 .product-list{
-
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: var(--padding-md) 0;
     h1{
         text-align: center;
     }
@@ -65,16 +70,20 @@
 
 .productsContent{
     display: flex;
-    height: 760px;
     align-items: center;
     justify-content: center;
 
-    > img{
+    .imageProductContent{
+        height: 760px;
         width: 50%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 100% 50%;
-        flex: 1;
+
+        > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 100% 50%;
+            flex: 1;
+        }
     }
 
     .secondaryCardContent{

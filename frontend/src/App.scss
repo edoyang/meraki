@@ -3,12 +3,24 @@
     --padding-md: 50px;
     --padding-sm: 25px;
     
-    --fontMed: 1.2rem;
-    --fontSmall: 1rem;
+    --font-lg: 2em;
+    --fontMed: 1.2em;
+    --fontSmall: 1em;
 
     --primary: #337A5B;
     --primary-dark: #285A43;
     --gray: #F8F8F8;
+
+
+    @media (max-width: 768px) {
+        --padding-lg: 50px;
+        --padding-md: 25px;
+        --padding-sm: 10px;
+
+        --font-lg: 1.5em;
+        --font-md: 1em;
+        --font-sm: 0.8em;
+    }
 }
 
 *, html,body{
@@ -79,5 +91,17 @@ body{
 
     a{
         color: white;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

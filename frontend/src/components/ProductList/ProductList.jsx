@@ -26,8 +26,8 @@ const ProductList = () => {
 
   const productListStyle = {
     display: 'grid',
-    padding: '50px 100px',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+    padding: '0 var(--padding-lg)',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, auto))',
     gap: '1rem',
   };
 

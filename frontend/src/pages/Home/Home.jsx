@@ -60,7 +60,9 @@ const Home = () => {
         <ProductList />
       </div>
       <div className="productsContent">
-        <img src="productsContent.png" alt="productsContent" />
+        <div className="imageProductContent">
+          <img src="productsContent.png" alt="productsContent" />
+        </div>
         <div className="secondaryCardContent">
           {productsContent.map((productContent, index) => (
             <SecondaryCard key={index} image={productContent.image} title={productContent.title} content={productContent.content} />
@@ -68,6 +70,7 @@ const Home = () => {
           )}
           </div>
       </div>
+      {/* TODO : ADD RESPONSIVE */}
       <div className="gallery">
         <h1 className="title">Our Gallery View</h1>
         <div className="galleryImages">
