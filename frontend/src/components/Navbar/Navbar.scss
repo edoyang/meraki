@@ -10,18 +10,17 @@
     background-color: transparent;
     z-index: 10;
     color: white;
-
+    
     @media (max-width: 768px) {
         position: sticky;
         background-color: white;
     }
-
+    
+    
     &.white-bg {
-        @media (max-width: 768px) {
-            background-color: white;
-            color: black;
-        }
-
+        background-color: white;
+        color: black;
+        
         .navbarMenu{
             ul{
                 li{
@@ -31,7 +30,7 @@
                 }
                 .btn-secondary{
                     border: 1px solid black;
-
+                    
                     &:hover{
                         a{
                             color: white;
@@ -41,8 +40,9 @@
             }
         }
     }
-
+    
     &.scrolled {
+        background-color: transparent;
         @media (min-width: 768px) {
             .navbarLogo, .navbarMenu, .cart-search, .hamburger{
                 display: none;
@@ -54,7 +54,7 @@
             
         }
     }
-
+    
     .navbarLogo {
         display: flex;
         align-items: center;
