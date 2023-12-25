@@ -17,8 +17,10 @@
     }
 
     &.white-bg {
-        background-color: white;
-        color: black;
+        @media (max-width: 768px) {
+            background-color: white;
+            color: black;
+        }
 
         .navbarMenu{
             ul{
