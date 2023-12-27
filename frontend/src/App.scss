@@ -83,6 +83,10 @@ body{
 
     &:active{
         transform: scale(0.90);
+
+        @media (max-width: 768px) {
+            transform: scale(1);
+        }
     }
 
     *{

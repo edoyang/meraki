@@ -51,6 +51,8 @@ const ProductList = () => {
               <ProductCard key={product._id} product={product} />
             ))}
       </div>
+
+      {/* TODO: REPLACE THIS BUTTON WITH FANCY AND MODERN THINGS */}
       <div className="indicator">
         <img id='left' onClick={scrollLeft} src="left-arrow.svg" alt="left-arrow" />
         <img id='right' onClick={scrollRight} src="right-arrow.svg" alt="right-arrow" />
