@@ -80,3 +80,50 @@
         }
     }
 }
+
+.gallery{
+
+    @media (max-width: 768px) {
+        .galleryImages{
+            display: flex;
+            overflow: auto;
+
+            img[alt="gallery"] {
+                height: 50vw;
+            }            
+        }
+    }
+}
+
+.testimonials{
+    @media (max-width: 768px) {
+        .testi-card{
+            flex-direction: column;
+            gap: 20px;
+            .testimonial-card{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.subscription{
+    @media (max-width: 768px) {
+        .subscribe{
+            flex-direction: column;
+
+            .input{
+                flex-direction: column;
+                width: 100%;
+
+                input{
+                    width: 100%;
+                }
+
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
